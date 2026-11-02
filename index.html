@@ -134,7 +134,7 @@ function renderDiscordProfile(){
 }
 async function flrDiscordLogin(){
  if(!db)return alert(flrText('Supabase is not connected.','Supabase n’est pas connecté.'));
- const {error}=await db.auth.signInWithOAuth({provider:'discord',options:{redirectTo:'https://flr-league.netlify.app/'}});
+ const {error}=await db.auth.signInWithOAuth({provider:'discord',options:{redirectTo:'https://itsfear-dev.github.io/flr-league/'}});
  if(error)alert(error.message);
 }
 async function flrDiscordLogout(){await db.auth.signOut();flrDiscordUser=null;renderDiscordProfile()}
